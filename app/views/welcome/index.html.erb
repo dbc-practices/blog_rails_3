@@ -1,1 +1,11 @@
-welcome index html erb
+WELCOME to Anonymous Blog - welcome index html erb page
+
+<br>
+<br>
+<% if @user %> 
+	<% link_to "Go to your profile", user_path(@user) %>
+<% else %>
+	<%= link_to "Sign up", new_user_path %><br>
+	<%= link_to "Sign in", new_session_path %><br>
+<% end %>
+
